@@ -91,3 +91,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Panggil fungsi pengecekan saat halaman dimuat
     checkLoginStatus();
 });
+
+// === FUNGSI UNTUK FILTER PROGRAM DI HALAMAN PROGRAM.HTML ===
+
+// Cek apakah kita berada di halaman program.html
+if (window.location.pathname.endsWith('program.html')) {
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const programCards = document.querySelectorAll('.program-card');
+
+        // Jika tidak ada elemen filter, hentikan eksekusi
+        if (filterButtons.length === 0) return;
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Hapus kelas 'active' dari semua tombol
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Tambahkan kelas 'active' ke tombol yang diklik
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                programCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+
+                    // Tampilkan kartu jika filter adalah 'all' atau kategorinya cocok
+                    if (filter === 'all' || cardCategory === filter) {
+                        card.style.display = 'block'; // atau 'flex', tergantung style asli
+                    } else {
+                        card.style.display = 'none'; // Sembunyikan kartu
+                    }
+                });
+            });
+        });
+    });
+}
