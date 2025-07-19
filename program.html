@@ -18,7 +18,7 @@
         </a>
         <div class="nav-menu" id="nav-menu">
             <a href="about.html" class="nav-link">Tentang Kami</a>
-            <a href="program.html" class="nav-link">Program</a>
+            <a href="program.html" class="nav-link active">Program</a>
             <a href="blog.html" class="nav-link">Edukasi</a>
             <a href="donasi.html" class="nav-link">Donasi</a>
             <a href="contact.html" class="nav-link">Kontak</a>
@@ -27,7 +27,7 @@
             
             <div class="profile-menu" id="profileMenu" style="display: none;">
                 <div class="profile-trigger" id="profileTrigger">
-                    <div class="profile-avatar">
+                    <div class="profile-avatar" id="profileAvatar">
                         <span id="profileInitials">U</span>
                     </div>
                     <span id="profileUsername">User</span>
@@ -36,14 +36,10 @@
                 <div class="profile-dropdown" id="profileDropdown">
                     <a href="relawan.html" class="dropdown-item">
                         <i class="fas fa-users"></i>
-                        <span>Kelola Relawan</span>
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-user"></i>
-                        <span>Profil Saya</span>
+                        <span>Daftar Relawan</span>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item" id="logoutBtn">
+                    <a href="#" class="dropdown-item logout-btn" id="logoutBtn">
                         <i class="fas fa-sign-out-alt"></i>
                         <span>Keluar</span>
                     </a>
@@ -56,46 +52,6 @@
             <span class="bar"></span>
         </div>
     </div>
-</nav>                
-                <!-- Login Button (shown when not logged in) -->
-                <a href="login.html" class="nav-link btn-login" id="loginBtn">Login</a>
-                
-                <!-- Profile Menu (shown when logged in) -->
-                <div class="profile-menu" id="profileMenu" style="display: none;">
-                    <div class="profile-trigger" id="profileTrigger">
-                        <div class="profile-avatar" id="profileAvatar">
-                            <span id="profileInitials">U</span>
-                        </div>
-                        <span id="profileUsername">User</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="profile-dropdown" id="profileDropdown">
-                        <a href="relawan.html" class="dropdown-item">
-                            <i class="fas fa-users"></i>
-                            <span>Kelola Relawan</span>
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-user"></i>
-                            <span>Profil Saya</span>
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-cog"></i>
-                            <span>Pengaturan</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item logout-btn" id="logoutBtn">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <span>Keluar</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -529,7 +485,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="main-script.js"></script>
 </body>
 </html>
